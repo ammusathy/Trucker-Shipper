@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal">
+
+    <view
+        android:id="@+id/image"
+        class="com.trukr.shipper.components.CropImageView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_x="0dip"
+        android:layout_y="0dip"
+        android:background="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/red"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/discard"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/redbtnbackground"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <ImageButton
+            android:id="@+id/rotateLeft"
+            android:layout_width="40dp"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@id/discard"
+            android:background="@drawable/rotate_left" />
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <ImageButton
+            android:id="@+id/rotateRight"
+            android:layout_width="40dp"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@id/rotateLeft"
+            android:background="@drawable/rotate_right" />
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/redbtnbackground"
+            android:text="Apply"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/paymentBack"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/backarrow" />
+
+        <TextView
+            android:id="@+id/tvPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="@string/payment"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp" />
+
+        <TextView
+            android:id="@+id/tvskip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/tvPayment"
+            android:layout_marginRight="15dp"
+            android:text="@string/skip"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/extralarge" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/headerLayout"
+        android:background="@color/gray"
+        android:orientation="horizontal"
+        android:padding="@dimen/_15sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/cardno"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@+id/imageView_Card"
+                    android:layout_toStartOf="@+id/imageView_Card"
+                    android:background="@color/white"
+                    android:drawableLeft="@drawable/visa"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:gravity="left|center_vertical"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/entercarddetails"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp" />
+
+                <CheckBox
+                    android:id="@+id/imageView_Card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_14sdp"
+                    android:button="@drawable/customdrawablecheckbox" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tvor1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/whitecircle"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/or"
+                android:textSize="@dimen/_14sdp" />
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnscancard"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@+id/imageView5"
+                    android:layout_toStartOf="@+id/imageView5"
+                    android:background="@color/red"
+                    android:drawableLeft="@drawable/camera"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:gravity="left|center_vertical"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/scancard"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp" />
+
+                <CheckBox
+                    android:id="@+id/imageView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:button="@drawable/customdrawablecheckbox"
+                    android:paddingLeft="@dimen/_2sdp"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvor2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/whitecircle"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/or"
+                android:visibility="gone"
+                android:textSize="@dimen/_14sdp" />
+
+
+            <RelativeLayout
+                android:id="@+id/rl_paypal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/btnpaypal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_toLeftOf="@+id/imageView_Paypal"
+                    android:background="@color/blue"
+                    android:drawableLeft="@drawable/pay_pal"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:gravity="left|center_vertical"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/paypal"
+                    android:visibility="gone"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp" />
+
+                <CheckBox
+                    android:id="@+id/imageView_Paypal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:button="@drawable/customdrawablecheckbox"
+                    android:paddingLeft="@dimen/_2sdp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvor3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/whitecircle"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/or"
+                android:textSize="@dimen/_14sdp" />
+
+
+            <RelativeLayout
+                android:id="@+id/rl_credit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnapplycredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_toLeftOf="@+id/imageView_Credits"
+                    android:background="@color/green"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/applyforcredit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp" />
+
+                <CheckBox
+                    android:id="@+id/imageView_Credits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_14sdp"
+                    android:button="@drawable/customdrawablecheckbox" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

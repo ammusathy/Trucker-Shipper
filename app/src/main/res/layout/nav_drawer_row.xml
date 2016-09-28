@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/email_icon"
+        android:drawablePadding="@dimen/_10sdp"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/_10sdp"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:text="@string/cancel"
+        android:textColor="@color/redmenu"
+        android:textStyle="normal"
+        android:textSize="@dimen/_15sdp" />
+
+</RelativeLayout>

@@ -1,0 +1,44 @@
+{
+  "project_info": {
+    "project_number": "629810243980",
+    "project_id": "shipper-1315"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:629810243980:android:f32e1b493395162b",
+        "android_client_info": {
+          "package_name": "com.trukr.shipper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "629810243980-nco9ctld2o1elul1ea01kkg7cirgh1b0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.trukr.shipper",
+            "certificate_hash": "1F01603F444339594D1D0A8DF01973516F98DE57"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALkOG49xPfQD6yzWaHGew7efJXNRnKtaw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

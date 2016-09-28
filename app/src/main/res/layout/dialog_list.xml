@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dip"
+    android:background="@drawable/alertdialogbackground">
+
+    <RelativeLayout
+        android:id="@+id/Header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/DialogTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="Select your truck type"
+            android:textColor="@color/white"
+            android:textSize="@dimen/large" />
+
+        <TextView
+            android:id="@+id/DialogLine"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/DialogTitle"
+            android:background="#000" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/ContentList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/CancelBtn"
+        android:layout_below="@+id/Header"
+        android:background="@color/white"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="#3c3c3c"
+        android:dividerHeight="0.5dp"
+        android:listSelector="@drawable/btnbackground"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollingCache="false" />
+
+    <Button
+        android:id="@+id/CancelBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/dialogbtnbackground"
+        android:text="@string/cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/red"
+        android:textSize="@dimen/large"
+        android:textStyle="bold" />
+
+</RelativeLayout>

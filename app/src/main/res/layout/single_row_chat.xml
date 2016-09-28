@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/dateheader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/progress_iphone_bg"
+        android:padding="5dp"
+        android:text="Date"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/friendlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/dateheader">
+
+        <ImageView
+            android:id="@+id/UserImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/innerlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/UserImage">
+
+            <TextView
+                android:id="@+id/left_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/message_text_friend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/left_arrow"
+                android:text="Medium"
+                android:textIsSelectable="true"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/friendAttachmentImg"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:adjustViewBounds="true"
+                android:maxHeight="250dp"
+                android:maxWidth="250dp"
+                android:padding="5dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/friend_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/innerlayout"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/UserImage"
+            android:text="5:05"
+            android:textColor="@color/gray" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/userlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dateheader">
+
+        <RelativeLayout
+            android:id="@+id/innerlayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/right_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/message_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/right_arrow"
+                android:text="Medium"
+                android:textIsSelectable="true"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/UserAttachmentImg"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="17dp"
+                android:layout_marginTop="5dp"
+                android:adjustViewBounds="true"
+                android:maxHeight="250dp"
+                android:maxWidth="250dp"
+                android:padding="5sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/user_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/innerlayout1"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="12dp"
+            android:text="5:05"
+            android:textColor="@color/gray" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_Cancel"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_corners_white"
+        android:gravity="bottom"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/btn_Approval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners_white"
+            android:gravity="center_horizontal"
+            android:padding="20dp"
+            android:text="Approve"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/_14sdp" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/btn_Disapproval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners_white"
+            android:gravity="center_horizontal"
+            android:padding="20dp"
+            android:text="Disapprove"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/_14sdp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/btn_Job_Detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners_white"
+            android:gravity="center_horizontal"
+            android:padding="20dp"
+            android:text="Job Detail"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/_14sdp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/btn_Cancel_Order"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners_white"
+            android:gravity="center_horizontal"
+            android:padding="20dp"
+            android:text="Cancel Order"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/_14sdp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn_Cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_corners_white"
+        android:gravity="center_horizontal"
+        android:padding="20dp"
+        android:text="Cancel"
+        android:textColor="#157efb"
+        android:textSize="@dimen/_14sdp" />
+
+
+</RelativeLayout>

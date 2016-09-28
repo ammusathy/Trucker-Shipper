@@ -1,0 +1,35 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+
+    <item
+        android:drawable="@drawable/one"
+        android:duration="@string/spinduration" />
+    <item
+        android:drawable="@drawable/two"
+        android:duration="@string/spinduration" />
+    <item
+        android:drawable="@drawable/three"
+        android:duration="@string/spinduration" />
+    <item
+        android:drawable="@drawable/four"
+        android:duration="@string/spinduration" />
+    <item
+        android:drawable="@drawable/five"
+        android:duration="@string/spinduration" />
+    <item
+        android:drawable="@drawable/six"
+        android:duration="@string/spinduration" />
+    <item
+        android:drawable="@drawable/seven"
+        android:duration="@string/spinduration" />
+    <item
+        android:drawable="@drawable/eight"
+        android:duration="@string/spinduration" />
+    <item
+        android:drawable="@drawable/nine"
+        android:duration="@string/spinduration" />
+    <item
+        android:drawable="@drawable/ten"
+        android:duration="@string/spinduration" />
+
+</animation-list>

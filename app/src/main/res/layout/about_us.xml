@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".fragment.AboutUs">
+
+    <LinearLayout
+        android:id="@+id/aboutus_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/aboutus_txt_sampletitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/title"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="normal" />
+
+
+        <TextView
+            android:id="@+id/aboutus_txt_samplecontent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_sampletitle"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/content"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="normal" />
+
+
+        <View
+            android:id="@+id/aboutus_txt_divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/text_samplecontent"
+            android:background="@color/gray" />
+
+        <TextView
+            android:id="@+id/aboutus_txt_sampletitle2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_divider"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:text="@string/title"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/aboutus_txt_samplecontent2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/aboutus_txt_sampletitle2"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/content"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#80FFFFFF"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@color/darkgray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/getintouchwithus"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_14sdp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/about_iv_twitter"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_40sdp"
+                android:background="@drawable/twitter" />
+
+            <ImageView
+                android:id="@+id/about_iv_gplus"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_40sdp"
+                android:background="@drawable/gplus" />
+
+            <ImageView
+                android:id="@+id/about_iv_facebook"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_40sdp"
+                android:background="@drawable/fb" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+

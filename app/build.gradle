@@ -1,0 +1,108 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'shipper'
+            //    storeFile file('')
+            keyPassword '123456'
+            storePassword '123456'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LGPL2.1'
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+        preDexLibraries = false
+    }
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+    defaultConfig {
+        applicationId 'com.trukr.shipper'
+        minSdkVersion 19
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled true
+
+        // API Response Params
+        buildConfigField "String", "STATUS_CODE", '"StatusCode"';
+        buildConfigField "String", "RESPONSE_MSG", '"Message"';
+
+        buildConfigField "String", "USER_TYPE", '"UserType"';
+        buildConfigField "String", "USER_ID", '"UserId"';
+        buildConfigField "String", "AUTH_TOKEN", '"AuthToken"';
+        buildConfigField "String", "REG_ID", '"RegId"';
+
+        // API Response Codes
+        buildConfigField "int", "RESPONSE_SUCCESS", '100';
+        buildConfigField "int", "RESPONSE_SUCCESS_DELETE", '101';
+        buildConfigField "int", "RESPONSE_SUCCESS_ACCEPT", '102';
+        buildConfigField "int", "_ERR_UNAUTHORIZED_TOKEN", '97';
+        buildConfigField "int", "_ERR_NULL_PARAMS", '98';
+        buildConfigField "int", "_ERR_INTERNAL_SERVER", '99';
+        buildConfigField "int", "_ERR_Code_101", '101';
+
+        //Google GCM_ID for push notification
+        buildConfigField "String", "GCM_ID", '"629810243980"';
+
+    }
+    buildTypes {
+        debug {
+            buildConfigField("String", "IP", '"http://www.etrukr.com/webservice/public/"');
+        }
+
+        release {
+            buildConfigField("String", "IP", '"http://www.etrukr.com/webservice/public/"');
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile files('libs/gcm.jar')
+    compile files('libs/volley.jar')
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:design:23.3.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.google.android.gms:play-services:8.4.0'
+    compile 'com.squareup.okhttp3:okhttp:3.0.0-RC1'
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'com.squareup.picasso:picasso:2.4.0'
+    compile 'com.android.support:multidex:1.0.0'
+    compile 'com.intuit.sdp:sdp-android:1.0.2'
+    compile 'com.crittercism:crittercism-android-agent:+'
+    compile 'com.paypal.sdk:paypal-android-sdk:2.14.2'
+    compile 'com.google.android.gms:play-services-ads:8.4.0'
+    compile 'com.google.android.gms:play-services-auth:8.4.0'
+    compile 'com.google.android.gms:play-services-gcm:8.4.0'
+    compile 'io.card:android-sdk:5.3.4'
+    compile 'org.etsi.uri.gcm:fractal-gcm-api:1.1.1'
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

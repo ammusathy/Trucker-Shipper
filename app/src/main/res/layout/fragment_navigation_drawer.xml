@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+
+    <Button
+        android:id="@+id/btnclose"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/_2sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/close" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/drawerList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_below="@id/btnclose"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@android:color/white" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_170sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/drawerbgimage" />
+
+
+</RelativeLayout>

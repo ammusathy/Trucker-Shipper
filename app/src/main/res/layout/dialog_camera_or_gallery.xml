@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp"
+    android:background="@android:color/transparent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/alertdialogbackground"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvalerthead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:text="@string/selectimage"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/darkgray" />
+
+        <TextView
+            android:id="@+id/btncamera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/takefromcamera"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/darkgray" />
+
+        <TextView
+            android:id="@+id/btngallery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/takefromgallery"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/darkgray" />
+
+        <Button
+            android:id="@+id/btncancel"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/dialogbtnbackground"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.trukr.shipper">
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <permission
+        android:name="com.trukr.shipper.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <!-- Permission to vibrate - recommended, allows vibration feedback on scan -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- Permission to use camera - required -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- Camera features - recommended -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+
+    <!-- General Permission -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Google Map Permission -->
+    <uses-permission android:name="com.trukr.shipper.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- Read External Storage. -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- Write External Storage. -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- Creates a custom permission so only this app can receive its messages. -->
+    <permission
+        android:name="com.trukr.shipper.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.trukr.shipper.permission.C2D_MESSAGE" />
+
+    <!-- This app has permission to register and receive data message. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:name=".application.TrukrApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.SplashScreen"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.Login"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.ForgotPassword"
+            android:label="@string/title_activity_forgot"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".activity.SignUp"
+            android:exported="true"
+            android:label="@string/title_activity_signup"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".activity.CreateNewPassword"
+            android:label="@string/title_activity_createpassword"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".activity.ChangePassword"
+            android:label="@string/changepassword"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".activity.CurrentJobTabLayout"
+            android:label="@string/jobdetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".components.CropImage"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.AddNewCard"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.PaymentList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WebViewDisplay"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.Notification"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- Receives the registration id. -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.trukr.app" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".GCMIntentService" />
+        <service android:name=".DialService" />
+        <service android:name=".HeartBeatService" />
+
+        <activity
+            android:name=".activity.ChangeMobileNumber"
+            android:label="@string/title_activity_change_mobile_number"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SlidingDrawer"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.DetailedScreen"
+            android:label="@string/title_activity_deliveredjob"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ViewDetails"
+            android:label="@string/viewdetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.VerifyMobileNumber"
+            android:label="@string/title_activity_verify_mobile_number"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PayPal"
+            android:label="@string/paypal"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NewJobDetails"
+            android:label="@string/newjobs"
+            android:screenOrientation="portrait" />
+
+        <!-- Activities responsible for gathering payment info -->
+        <activity
+            android:name="io.card.payment.CardIOActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="io.card.payment.DataEntryActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyC55r2ndpln9xRzy5XyXeK-7AG2ygTM390" />
+
+        <activity
+            android:name=".fragment.RequestStatus"
+            android:label="@string/title_activity_maps"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fragment.RequestReceived"
+            android:label="@string/title_map_activity"
+            android:screenOrientation="portrait" />
+
+
+    </application>
+
+</manifest>

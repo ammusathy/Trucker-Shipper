@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/btnbackpay"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/backarrow" />
+
+        <TextView
+            android:id="@+id/tvaddcard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="@string/addanewcard"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp" />
+
+        <ImageView
+            android:id="@+id/removecard"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/icon_delete_grey" />
+
+    </RelativeLayout>
+
+
+    <ListView
+        android:id="@+id/paymentcard_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/newpay"
+        android:layout_below="@+id/headerLayout"
+        android:divider="@null" />
+
+    <Button
+        android:id="@+id/newpay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/btnbg"
+        android:text="@string/addanewcard"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16sdp" />
+
+</RelativeLayout>
